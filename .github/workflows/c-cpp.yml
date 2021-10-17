@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: configure
-      run: cd code/4r-in1a/tp1 && ./configure
+      run: ./configure
     - name: make
       run: cd code/4r-in1a/tp1 && make
     - name: make check
