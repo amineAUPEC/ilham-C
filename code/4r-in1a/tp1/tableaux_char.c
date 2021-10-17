@@ -1,25 +1,30 @@
 #include <stdio.h>
 
-int mon_tableau[3]={1,5,6};
-
+char mon_tableau_char[3]={'r','g','b'};
 
 int main(void) {
-  int result = print_int_tab(mon_tableau);
-
-  printf("Result : %d \n", result);
+  int len_tab = sizeof(mon_tableau_char)/sizeof(mon_tableau_char[0]);
+  printf("len_tab : %d \n", len_tab);
+  int result = print_char_tab(mon_tableau_char, len_tab);
   return 0;
 
 }
 
 
 
-int print_int_tab(unsigned int tableau[]){
+int print_char_tab(unsigned char tableau[], int length){
     int j;
-    for (j = 0; j < 3; j++ ) {
-        printf("Element[%d] = %d\n", j, tableau[j] );
+    for (j = 0; j < length ; j++ ) {
+        printf("Element[%d] = %c\n", j, tableau[j] );
     }
     return 0; 
 }
+
+
+
+
+
+
 
 
 
