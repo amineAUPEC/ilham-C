@@ -28,7 +28,10 @@ struct t_Adresse
 
 int main(void)
 {
-    int resultat = est_bissextile(2015);
+    struct t_Date d1;
+    d1.an=2016;
+
+    int resultat = est_bissextile(d1.an);
     return 0;
 }
 
