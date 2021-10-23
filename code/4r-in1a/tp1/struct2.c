@@ -30,8 +30,10 @@ int main(void)
 {
     struct t_Date d1;
     d1.an=2016;
+    d1.mois=1;
 
     int resultat = est_bissextile(d1.an);
+    nb_jours_par_mois(d1.mois);
     return 0;
 }
 
@@ -56,10 +58,31 @@ int est_bissextile(int annee_test)
 
 
 
-int numberof_day[]
-
-char mon_tableau_char[13]={'jan','fev','mars', 'avril', 'mai','juin', 'juill', 'aout', 'sept', 'oct', 'nov', 'dec'};
-int numberof_day[13]={31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31, 29};
+// int numberof_day[]
 
 
 
+
+
+int nb_jours_par_mois(int jour_test)
+{
+    char mon_tableau_char[13]={"jan", "fev", "mars", "avril", "mai", "juin", "juill", "aout", "sept", "oct", "nov", "dec", "feb"};
+    int numberof_day_on_month[13]={31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31, 29};
+
+    if (jour_test >=1 && jour_test <= 12){
+
+            int indexed_jour_test=jour_test-1;
+            printf("Le nombre de jour dans ce mois est de : %d \n", numberof_day_on_month[indexed_jour_test]);
+            return 1;
+
+            // si bissextile
+
+
+    }
+    else {
+            printf("BONUS : Le nombre de jour du mois est invalide !!");
+            return -1;
+
+    }
+
+}
