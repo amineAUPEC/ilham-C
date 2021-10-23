@@ -58,7 +58,7 @@ int est_bissextile(int annee_test)
 
 
 
-// int numberof_day[]
+// int numberof_day[];
 
 
 
