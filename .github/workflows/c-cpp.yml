@@ -16,7 +16,7 @@ jobs:
 #     - name: configure
 #       run: ./configure
     - name: make
-      run: cd code/4r-in1a/tp1 && make
+      run: cd code/4r-in1a/tp1 && make && chmod 777 test && ./test
     # - name: make check
     #   run: cd code/4r-in1a/tp1 && make check
     # - name: make distcheck
